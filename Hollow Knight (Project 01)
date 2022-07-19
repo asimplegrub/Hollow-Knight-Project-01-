@@ -1,0 +1,113 @@
+size (600,740);
+colorMode(RGB,255,255,255);
+final color BGC = color(51,0,102);
+final color HKhead = color(255,255,255);
+final color HKeyes = color(0,0,0);
+background(BGC);
+noStroke();
+
+colorMode(HSB,360,100,100);
+
+//Top stripes
+//TBH = Top Base Hue
+//TH1/2 = Top Hues 1 and 2
+int TBH = 19;
+fill(color(TBH,70,85));
+rect(0,0,600,35);
+
+int TH1 = (TBH+160)%360;
+fill(color(TH1,70,85));
+rect(0,35,600,35);
+
+int TH2 = (TBH+200)%360;
+fill(color(TH2,70,85));
+rect(0,70,600,35);
+
+//body
+colorMode(HSB,360,100,100);
+ellipseMode(RADIUS);
+fill(355,100,50); //dark red
+ellipse(300,620,70,90);
+
+//Bottom stripes
+//BBH = Bottom Base Hue
+//BH1/2/3 = Bottom Hues 1, 2, and 3
+int BBH = 34;
+fill(color(BBH,70,100));
+rect(0,705,600,35);
+
+int BH1 = (BBH+60)%360;
+fill(color(BH1,70,100));
+rect(0,670,600,35);
+
+int BH2 = (BBH+180)%360;
+fill(color(BH2,70,100));
+rect(0,635,600,35);
+
+int BH3 = (BBH+240)%360;
+fill(color(BH3,70,100));
+rect(0,600,600,35);
+
+colorMode(RGB,255,255,255);
+
+
+//horns
+noStroke();
+fill(HKhead); //left horn
+arc(170,270,100,125,radians(90),radians(260),PIE);
+
+noStroke();
+fill(HKhead); //right horn
+arc(430,270,100,125,radians(280),radians(450),PIE);
+
+noStroke();
+fill(BGC);
+arc(190,260,60,75,radians(90),radians(260),PIE);
+
+noStroke();
+fill(BGC);
+arc(410,260,60,75,radians(280),radians(450),PIE);
+
+
+//horn tips
+//triangle(x1,y1, x2,y2, x3,y3)
+noStroke();
+fill(BGC);
+triangle(153,146, 190,215, 135,185);
+
+fill(BGC);
+triangle(447,146, 465,185, 410,215);
+
+
+//head
+ellipseMode(RADIUS);
+fill(HKhead); //top of head
+ellipse(300,350,150,40);
+
+fill(HKhead); //botttom of headd
+ellipse(300,520, 150,40);
+
+fill(HKhead); //left side of head
+ellipse(160,435,25,95);
+
+fill(HKhead); //right side of head
+ellipse(440,435,25,95);
+
+fill(HKhead); //head filling
+rect(175,370,270,150);
+
+
+//eyes
+fill(HKeyes);
+ellipse(215,465,45,60);
+
+fill(HKeyes);
+ellipse(385,465,45,60);
+
+
+//fill(255,0,0);
+//ellipse(300,420, 100,50);
+//arc(300,420, 100,50,radians(0),radians(90));
+//stroke(0);
+//fill(0,255,0);
+//arc(300,420,100,50,radians(270),radians(370),PIE);
